@@ -21,8 +21,13 @@ print('Y',Y)
 
 #tạo ma trận 1
 one=np.ones((X.shape[0],1))
-#thêm cột 1 vào ma trận X
-Xbar=np.concatenate((one,X),axis=1)
+
+# Chuẩn hóa X (dữ liệu đầu vào) bằng StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Cập nhật X với X_scaled đã chuẩn hóa
+Xbar = np.concatenate((np.ones((X_scaled.shape[0], 1)), X_scaled), axis=1)
 
 # w = np.zeros((Xbar.shape[1], 1))
 # m, n = Xbar.shape
@@ -30,12 +35,12 @@ Xbar=np.concatenate((one,X),axis=1)
 A = np.dot(Xbar.T, Xbar)
 b = np.dot(Xbar.T, Y)
 #m, n = Xbar.shape
-#w = np.ones((n, 1))  # Khởi tạo weights với giá trị 0
+w = np.zeros((Xbar.shape[1], 1)) # Khởi tạo weights với giá trị 0
 print('Xbar:',Xbar,Xbar.shape)
-w=np.dot(np.linalg.pinv(np.dot(Xbar.T, Xbar)), np.dot(Xbar.T, Y))
-lr=LR(eta=0.01)
-w_new,i = lr.run(Xbar,Y,w)
-
+#w=np.dot(np.linalg.pinv(np.dot(Xbar.T, Xbar)), np.dot(Xbar.T, Y))
+lr=LR(eta=0.001)
+# Tạo mô hình và chạy như bình thường
+w_new, i = lr.run(Xbar, Y, w)
 print('Trọng số w:',w_new)
 print('Vòng lặp kết thúc sau:',(i+1),'lần')
 
@@ -44,17 +49,18 @@ X_thucte = data.iloc[-200: ,:].drop([data.columns[2], data.columns[-1]], axis=1)
 Y_thucte = data.iloc[-200:,-1].values.reshape(-1, 1)  #Lấy cột cuối
 
 # Dự đoán với tập kiểm tra
-Y_dudoan = np.dot(np.concatenate((np.ones((X_thucte.shape[0], 1)), X_thucte), axis=1), w_new)
+#Y_dudoan = np.dot(np.concatenate((np.ones((X_thucte.shape[0], 1)), X_thucte), axis=1), w_new)
+X_thucte_scaled = scaler.transform(X_thucte)
 
+# Thêm cột 1 vào X_thucte đã chuẩn hóa
+X_thucte_bar = np.concatenate((np.ones((X_thucte_scaled.shape[0], 1)), X_thucte_scaled), axis=1)
+
+# Dự đoán với tập kiểm tra
+Y_dudoan = np.dot(X_thucte_bar, w_new)
 # In kết quả
-print("Giá trị thực tế Y:", Y_thucte[:])
+print("Giá trị thực tế Y:")
+print(Y_thucte[:])
 print("Giá trị dự đoán Y:", Y_dudoan[:])
 
 r2 = r2_score(Y_thucte, Y_dudoan)
 print("R² score (độ chính xác): ",r2)
-# Chuẩn hóa đầu vào
-# scaler_X = StandardScaler()
-# scaler_Y = StandardScaler()
-
-# X_scaled = scaler_X.fit_transform(X)
-# Y_scaled = scaler_Y.fit_transform(Y)

@@ -21,12 +21,8 @@ class GD:
     def tinh_grad(self,X,Y,w):
         m = len(Y)
         predictions = np.dot(X,w)  
-        # print('pred1',predictions)
         py = predictions - Y
-        # print('py',py)
-        # print('xpy')
         gradient = (1 / m) * np.dot(X.T,py )
-        # print('gradient',gradient)
         
         return gradient
 
@@ -37,12 +33,12 @@ class GD:
         w_cal = np.copy(w)
 
     # Vòng lặp tối đa 100 lần
-        for i in range(100):
+        for i in range(10000):
             old_w_cal = np.copy(w_cal)
             gradient = self.tinh_grad(X, Y,w_cal)
             w_cal = old_w_cal - (self.eta * gradient)
             
-            if np.linalg.norm(self.tinh_grad(X, Y,w_cal))/m < 1e-3 :  
+            if np.linalg.norm(self.tinh_grad(X, Y,w_cal))/m < 1e-5 :  
                 # print('Tìm ra giá trị sau',(i+1),'vòng lặp')
 
                 break
