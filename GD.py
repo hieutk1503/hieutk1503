@@ -47,27 +47,6 @@ class GD:
 
                 break
         return w_cal,i
-            # m, n = X.shape
-            # self.w = np.zeros((n, 1))  # Khởi tạo weights với giá trị 0
-        
-            # for i in range(100):
-            # # Tính gradient
-            #     gradient = self.tinh_grad(X, Y)
-            
-            # # Cập nhật weights
-            #     self.w -= self.eta * gradient
-            
-            #     cost = self.tinh_cost(X, Y)
-            #     self.x_ds.append(cost)
-            # # grad=self.tinh_grad(X,Y)
-            # # self.x_ds.append(grad)
-            
-            # # Kiểm tra hội tụ
-            #     if i > 0 and abs(self.x_ds[-1] - self.x_ds[-2]) < (10**(-3)):
-            #         break
-
-    
-        
 
 
     
