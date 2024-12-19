@@ -33,7 +33,7 @@ class GD:
         w_cal = np.copy(w)
 
     # Vòng lặp tối đa 100 lần
-        for i in range(10000):
+        for i in range(400000):
             old_w_cal = np.copy(w_cal)
             gradient = self.tinh_grad(X, Y,w_cal)
             w_cal = old_w_cal - (self.eta * gradient)
@@ -43,7 +43,5 @@ class GD:
 
                 break
         return w_cal,i
-
-
     
 
