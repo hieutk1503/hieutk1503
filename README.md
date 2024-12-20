@@ -22,3 +22,8 @@ Dưới dạng vecto:
 ### 3.Hàm mất mát
 
 ![Screenshot 2024-12-20 014004](https://github.com/user-attachments/assets/8e77b981-8feb-4759-b94e-66ec92c33f84)
+Mục tiêu là làm cho hàm mất mát nhỏ nhất
+
+## III. Giới thiệu về Gradient Descent.
+### 1. Khái niệm
+Gradient Descent là một thuật toán tối ưu hóa được sử dụng để tìm giá trị cực tiểu của một hàm số, thường áp dụng trong học máy và học sâu. Mục tiêu là điều chỉnh các tham số mô hình để giảm thiểu hàm mất mát (loss function).
