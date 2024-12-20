@@ -29,5 +29,6 @@ Mục tiêu là làm cho hàm mất mát nhỏ nhất
 Gradient Descent là một thuật toán tối ưu hóa được sử dụng để tìm giá trị cực tiểu của một hàm số, thường áp dụng trong học máy và học sâu. Mục tiêu là điều chỉnh các tham số mô hình để giảm thiểu hàm mất mát (loss function).
 ### 2. Công thức
 ![image](https://github.com/user-attachments/assets/0b0456c0-4a39-4a5b-a625-3bcc860e6868)
+
 Cách hoạt động: Gradient Descent dựa trên việc cập nhật các trọng số theo hướng ngược lại với đạo hàm của hàm mất mát và thuật toán sẽ dừng khi ∇L(w) là 1 số gần bằng 0, thường là 1e-5.
 
