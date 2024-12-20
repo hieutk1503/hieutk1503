@@ -1,14 +1,13 @@
 import numpy as np
-
-class GD:
-    def __init__(self,eta):
-        self.eta=eta
-        self.x_ds=[]
+from Linear import LR
+class GD(LR):
+    def __init__(self,eta,Xbar,Y,w):
+        super().__init__(eta,Xbar,Y,w)
         
 
-    def tinh_cost(self,X,Y,w):
+    def tinh_cost(self,Xbar,Y,w):
         m = len(Y)
-        predictions = np.dot(X,w)  
+        predictions = np.dot(Xbar,w)  
         cost = (1 / (2 * m)) * np.sum((Y-predictions) ** 2) 
         return cost
 
@@ -18,29 +17,26 @@ class GD:
     #     eps=10**-3
     #     return (self.cost(x+eps)-self.cost(x-eps))/(2*eps)
 
-    def tinh_grad(self,X,Y,w):
+    def tinh_grad(self,Xbar,Y,w):
         m = len(Y)
-        predictions = np.dot(X,w)  
+        predictions = np.dot(Xbar,w)  
         py = predictions - Y
-        gradient = (1 / m) * np.dot(X.T,py )
+        gradient = (1 / m) * np.dot(Xbar.T,py )
         
         return gradient
 
 #tính
-    def run(self, X, Y,w):
-        m = X.shape[0]
+    def run(self, Xbar, Y,w):
+        m = Xbar.shape[0]
 
         w_cal = np.copy(w)
 
     # Vòng lặp tối đa 100 lần
         for i in range(400000):
             old_w_cal = np.copy(w_cal)
-            gradient = self.tinh_grad(X, Y,w_cal)
+            gradient = self.tinh_grad(Xbar, Y,w_cal)
             w_cal = old_w_cal - (self.eta * gradient)
-            
-            if np.linalg.norm(self.tinh_grad(X, Y,w_cal))/m < 1e-5 :  
-                # print('Tìm ra giá trị sau',(i+1),'vòng lặp')
-
+            if np.linalg.norm(self.tinh_grad(Xbar, Y,w_cal))/m < 1e-5 :  
                 break
         return w_cal,i
     
