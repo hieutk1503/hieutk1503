@@ -31,4 +31,6 @@ Gradient Descent là một thuật toán tối ưu hóa được sử dụng đ�
 ![image](https://github.com/user-attachments/assets/0b0456c0-4a39-4a5b-a625-3bcc860e6868)
 
 Cách hoạt động: Gradient Descent dựa trên việc cập nhật các trọng số theo hướng ngược lại với đạo hàm của hàm mất mát và thuật toán sẽ dừng khi ∇L(w) là 1 số gần bằng 0, thường là 1e-5.
-
+## IV. Cài đặt
+- Lớp main kế thừa lớp GD để chạy chương trình chính.
+- Sử dụng các thư viện Pandas để đọc dữ liệu, thư viện sklearn để chuẩn hoá dữ liệu và tính độ chính xác. 
