@@ -34,9 +34,9 @@ Final-year student and member of the university's AI Lab (since 08/2024). My wor
 
 ### 🚀 Featured Projects
 
-* 📄 **[Medical Record Information Extraction](https://github.com/YOUR_USERNAME/REPO_NAME)** — Automated document layout analysis and structured entity extraction from medical records using **LayoutLMv3**, **DBSCAN**, and **GMM**.
-* 🤖 **[Tự Lạn Smart - AI Public Service Mini App](https://github.com/YOUR_USERNAME/REPO_NAME)** — Smart public service platform on Zalo Mini App integrating **React**, **NestJS**, **FastAPI**, local LLM workflows, and **Redis** semantic caching.
-* 🚚 **[Vehicle Routing Problem with Time Windows (VRPTW)](https://github.com/YOUR_USERNAME/REPO_NAME)** — Optimization algorithms and heuristic models for solving complex delivery routing schedules.
+* 📅 **[Appointment Booking Application](https://github.com/hieutk1503/Appointment-Booking-Application)** — Full-stack scheduling & real-time communication platform built with **Spring Boot**, **React**, and **PostgreSQL**, featuring **JWT** authentication and **WebSocket (STOMP/SockJS)** messaging.
+* 🤖 **[Tự Lạn Smart - AI Public Service Mini App](https://github.com/hieutk1503/zalo-mini-app)** — Smart public service platform on Zalo Mini App integrating **React**, **NestJS**, **FastAPI**, local LLM workflows, and **Redis** semantic caching.
+* 🚚 **[Vehicle Routing Problem with Time Windows (VRPTW)](https://github.com/hieutk1503/VRPTW)** — Optimization algorithms and heuristic models for solving complex delivery routing schedules.
 
 👉 **[View all repositories →](https://github.com/YOUR_USERNAME?tab=repositories)**
 
@@ -53,12 +53,12 @@ Final-year student and member of the university's AI Lab (since 08/2024). My wor
 ### 📊 My GitHub Contributions Summary
 
 <div align="left">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=hieutk1503&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hieutk1503&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 </div>
 
 <br/>
 
 <div align="left">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=YOUR_USERNAME&theme=tokyonight" alt="Contribution Graph" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hieutk1503&theme=tokyonight" alt="Contribution Graph" />
 </div>
