@@ -38,7 +38,7 @@ Final-year student and member of the university's AI Lab (since 08/2024). My wor
 * 🤖 **[Tự Lạn Smart - AI Public Service Mini App](https://github.com/hieutk1503/zalo-mini-app)** — Smart public service platform on Zalo Mini App integrating **React**, **NestJS**, **FastAPI**, local LLM workflows, and **Redis** semantic caching.
 * 🚚 **[Vehicle Routing Problem with Time Windows (VRPTW)](https://github.com/hieutk1503/VRPTW)** — Optimization algorithms and heuristic models for solving complex delivery routing schedules.
 
-👉 **[View all repositories →](https://github.com/YOUR_USERNAME?tab=repositories)**
+👉 **[View all repositories →](https://github.com/hieutk1503?tab=repositories)**
 
 ---
 
